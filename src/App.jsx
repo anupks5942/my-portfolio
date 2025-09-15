@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from "react";
-import { Menu, X, ArrowRight, ExternalLink, Github, Linkedin, MessageSquare, Code, Server, Monitor, Database, Layers, Cloud, Network, BookOpen, GraduationCap, Mail, Phone, Calendar, Download } from "lucide-react";
+import { Menu, X, ArrowRight, ExternalLink, Github, Linkedin, MessageSquare, Code, Server, Monitor, Database, Layers, Cloud, Network, BookOpen, GraduationCap, Mail, Phone, Calendar, Download, Play } from "lucide-react";
 import emailjs from '@emailjs/browser';
 
 export default function AnupPortfolio() {
@@ -136,29 +136,57 @@ export default function AnupPortfolio() {
   // Projects data
   const projects = [
     {
-      title: "Study Buddy (Study Material App)",
-      description: "Centralized mobile app providing notes, syllabus, and previous year question papers (PYQs) for all RGPV branches and semesters.",
-      stack: ["Flutter", "Dart", "Firebase"],
-      image: "https://res.cloudinary.com/dlen26ceb/image/upload/v1755330495/Study_Buddy_fjza5n.jpg", // replace with actual if available
-      // Github: "https://github.com/anupks5942/study-material-app",
-      downloadLink: "https://drive.google.com/file/d/19JUYiycRBap12UgAlnp1m2KPio-ANXjq/view?usp=sharing"
+      title: "Feuchar: Astrology & Kundli",
+      description: "Online astrology consultation platform with real-time chat, audio, and video sessions. Includes secure payments, personalized recommendations, and seamless onboarding.",
+      stack: ["Flutter", "Dart", "Firebase", "Agora SDK", "GetX", "REST APIs", "Git/GitHub", "Figma"],
+      image: "https://res.cloudinary.com/dlen26ceb/image/upload/v1757948345/user_liwmyp.webp",
+      link: "https://play.google.com/store/apps/details?id=com.feuchar.user&hl=en_IN",
+    },
+    {
+      title: "Feuchar astrologer",
+      description: "Connects users with verified astrologers via chat, audio, and video. Features scheduling, session management, analytics, and training programs for astrologers.",
+      stack: ["Flutter", "Dart", "Firebase", "Agora SDK", "GetX", "REST APIs", "Git/GitHub", "Figma"],
+      image: "https://res.cloudinary.com/dlen26ceb/image/upload/v1757950947/astro_ngg8xh.webp",
+      link: "https://play.google.com/store/apps/details?id=com.feuchar.astrologer&hl=en_IN",
+    },
+    {
+      title: "Stockship (Inventory Management Web App)",
+      description: "Flutter web app for shipment tracking with booking, invoicing, picklist, and bulk CSV uploads. Supports real-time updates and detailed logistics reporting.",
+      stack: ["Flutter (Web)", "Dart", "Provider", "Firebase", "Node.js", "Express.js", "Socket.IO", "Git/GitHub"],
+      image: "https://res.cloudinary.com/dlen26ceb/image/upload/v1757946265/Screenshot_2025-09-15_195403_wru8bo.png",
+      link: "https://inventory-management-7a979.web.app/",
+      videoLink: "https://drive.google.com/file/d/1DNr5TnWdVd44i4ys34LDo7e38yVGQh9S/view?usp=sharing"
+    },
+    {
+      title: "KO-Captain (Logistics Mobile App)",
+      description: "Mobile app for logistics with QR code scanning, weight checking, real-time tracking, and backend integration to improve warehouse operations.",
+      stack: ["Flutter", "Dart", "Provider", "Firebase", "Node.js", "Express.js", "REST APIs", "Git/GitHub"],
+      image: "https://res.cloudinary.com/dlen26ceb/image/upload/v1757947387/image_j3mbb9.png",
     },
     {
       title: "Learning Management System (LMS)",
-      description: "Full-stack LMS with course creation, lecture uploads, student enrollment, and search/filtering capabilities.",
-      stack: ["Flutter", "Dart", "Node.js", "Express.js", "MongoDB", "Provider"],
-      image: "https://res.cloudinary.com/dlen26ceb/image/upload/v1755330495/LMS_upidfk.jpg", // replace with actual if available
-      // Github: "https://github.com/anupks5942/lms-frontend",
+      description: "Full-stack LMS enabling course creation, enrollment, progress tracking, and secure authentication with interactive quizzes.",
+      stack: ["Flutter", "Dart", "Provider", "Node.js", "Express.js", "MongoDB", "REST APIs"],
+      image: "https://res.cloudinary.com/dlen26ceb/image/upload/v1755330495/LMS_upidfk.jpg",
+      github: "https://github.com/anupks5942/lms-frontend",
       downloadLink: "https://drive.google.com/file/d/1LlpSyXbjEWFVw-rndufdBIgQgPOQCQC1/view?usp=sharing"
     },
     {
-      title: "GeoTrack (Location Tracking App)",
-      description: "Location-based attendance tracking app that automates employee check-ins and check-outs using geofencing.",
-      stack: ["Flutter", "Dart", "Firebase", "Geofencing"],
-      image: "https://res.cloudinary.com/dlen26ceb/image/upload/v1755330495/GeoTrack_emstnp.jpg",
-      // Github: "",
-      downloadLink: "https://drive.google.com/file/d/1c5cO3Ua_-GYaEo4y4mjWLptKzcjgeEqg/view?usp=sharing"
+      title: "Study Buddy (Study Material App)",
+      description: "Centralized app offering notes, syllabus, and past papers for RGPV. Features offline access and Gemini-powered chatbot for doubt clearance.",
+      stack: ["Flutter", "Dart", "Firebase", "Gemini"],
+      image: "https://res.cloudinary.com/dlen26ceb/image/upload/v1755330495/Study_Buddy_fjza5n.jpg",
+      github: "https://github.com/anupks5942/study_buddy",
+      downloadLink: "https://drive.google.com/file/d/19JUYiycRBap12UgAlnp1m2KPio-ANXjq/view?usp=sharing"
     },
+    // {
+    //   title: "GeoTrack (Location Tracking App)",
+    //   description: "Location-based attendance tracking app that automates employee check-ins and check-outs using geofencing.",
+    //   stack: ["Flutter", "Dart", "Firebase", "Geofencing"],
+    //   image: "https://res.cloudinary.com/dlen26ceb/image/upload/v1755330495/GeoTrack_emstnp.jpg",
+    //   github: "https://github.com/anupks5942/geo-track",
+    //   downloadLink: "https://drive.google.com/file/d/1c5cO3Ua_-GYaEo4y4mjWLptKzcjgeEqg/view?usp=sharing"
+    // },
     // {
     //   title: "Telemedicine App",
     //   description: "Videoconferencing app for doctors and patients with appointment booking, chat, video/voice calling, and integrated ML features.",
@@ -166,20 +194,6 @@ export default function AnupPortfolio() {
     //   image: "https://raw.githubusercontent.com/yogesh-soni-4/Face-Detection/main/sample.png", // placeholder
     //   Github: "https://github.com/yogesh-soni-4/Face-Detection/tree/main"
     // },
-    // {
-    //   title: "KO Captain (Logistics App)",
-    //   description: "Mobile logistics management app with real-time CSV uploads (Socket.io), API integration, and null-safe state management.",
-    //   stack: ["Flutter", "Dart", "Firebase", "Node.js", "Socket.io", "Provider"],
-    //   image: "/api/placeholder/400/300",
-    //   Github: "" // add repo link if public
-    // },
-    // {
-    //   title: "Stockship (Inventory Management Web App)",
-    //   description: "Web-based inventory management system with real-time data sync and Firebase backend integration.",
-    //   stack: ["Flutter (Web)", "Node.js", "Firebase"],
-    //   image: "/api/placeholder/400/300",
-    //   Github: "" // add repo link if public
-    // }
   ];
 
   const educationData = [
@@ -217,7 +231,7 @@ export default function AnupPortfolio() {
     {
       category: 'Frontend & Mobile',
       icon: <Monitor size={24} />,
-      items: ['Flutter', 'Responsive UI/UX', 'Provider'],
+      items: ['Flutter', 'React.js', 'Responsive UI/UX', 'Provider', 'GetX', 'Figma'],
     },
     {
       category: 'Backend',
@@ -232,16 +246,26 @@ export default function AnupPortfolio() {
     {
       category: 'Tools & Others',
       icon: <Layers size={24} />,
-      items: ['Git', 'GitHub', 'State Management', 'Socket.io', 'Machine Learning'],
+      items: ['Git', 'GitHub', 'Socket.IO'],
     },
   ];
 
   // Experience data
   const experiences = [
     {
-      role: "Flutter Developer Intern",
+      role: "Flutter Developer",
+      company: "Lavi Software and Technologies PVT LTD",
+      period: "July 2025 – September 2025",
+      responsibilities: [
+        "Developed and deployed Feuchar user app with Figma UI, REST APIs, and Agora chat/video/live.",
+        "Built Feuchar astrologer app with responsive UI, REST APIs, and real-time chat/calls/live.",
+        "Optimized onboarding and payment flows for seamless user experience.",
+      ]
+    },
+    {
+      role: "Flutter Developer",
       company: "VortexV",
-      period: "May 2025 – Present",
+      period: "May 2025 – September 2025",
       responsibilities: [
         "Built responsive mobile apps with Flutter & Dart, integrating REST APIs and modern UI/UX components.",
         "Collaborated in a version-controlled team using Git/GitHub.",
@@ -249,12 +273,12 @@ export default function AnupPortfolio() {
       ]
     },
     {
-      role: "Flutter Developer Intern",
+      role: "Flutter Developer",
       company: "Katyayani Organics",
       period: "Nov 2024 – May 2025",
       responsibilities: [
         "Built KO-Captain (mobile) and Stockship (web) apps using Flutter, Node.js, and Firebase.",
-        "Handled UI, API integration, real-time CSV uploads with Socket.io, and Provider state management.",
+        "Handled UI, API integration, real-time CSV uploads with Socket.IO, and Provider state management.",
         "Ensured stability with null-safe models and earned praise from senior developers."
       ]
     }
@@ -335,8 +359,7 @@ export default function AnupPortfolio() {
               Full-Stack Innovator Building Scalable Systems and Cutting-Edge Interfaces
             </h2>
             <p className="text-gray-400 mb-8 leading-relaxed">
-              I craft scalable mobile and web applications using Flutter, Firebase, Node.js/Express, and REST APIs, with a strong focus on responsive UI/UX and modern state management. My expertise spans backend integration, real-time features with Socket.io, and efficient database handling using MongoDB and SQL. Passionate about innovation, I also explore machine learning applications, from chatbots to disease detection, to build impactful, user-centric solutions.
-            </p>
+              I build scalable mobile and web applications using Flutter, React.js, Node.js/Express, and REST APIs, emphasizing high-performance UI/UX and modern state management with Provider and GetX. My experience includes backend integration, real-time updates with Socket.IO, and robust database management using MongoDB and MySQL. Passionate about delivering reliable, production-ready solutions, I also explore innovative technologies like machine learning to create impactful, user-focused applications.            </p>
           </div>
           <div className="w-full md:w-1/4 flex flex-col space-y-4 md:pl-8">
             <button
@@ -377,10 +400,10 @@ export default function AnupPortfolio() {
             </div>
             <div className="md:w-2/3 md:pl-12">
               <p className="text-gray-300 mb-6 leading-relaxed">
-                Versatile Flutter & Full-Stack Developer with experience in building scalable mobile and web applications using Flutter, Firebase, Node.js, and REST APIs. Skilled at crafting high-performance UI/UX with modern state management (Provider) and integrating secure, real-time features such as Socket.io. Strong foundation in Data Structures & Algorithms with hands-on project and internship experience.
+                Versatile Flutter & Full-Stack Developer with experience in building scalable mobile and web applications using Flutter, Firebase, Node.js, and REST APIs. Skilled at crafting high-performance UI/UX with modern state management (Provider, GetX) and integrating secure, real-time features such as Socket.IO. Strong foundation in Data Structures & Algorithms with hands-on project and internship experience.
               </p>
               <p className="text-gray-300 mb-6 leading-relaxed">
-                Passionate about developing impactful applications, I have worked on projects ranging from Study Buddy and Learning Management System to Telemedicine and logistics solutions (KO Captain & Stockship). With proficiency in Git/GitHub collaboration, backend integration, and machine learning applications, I strive to deliver efficient, user-centric, and reliable software solutions.
+                Passionate about developing impactful applications. I have worked on projects ranging from Study Buddy and Learning Management System to Astrology and Logistics solutions (KO Captain & Stockship). With proficiency in Git/GitHub collaboration and backend integration, I strive to deliver efficient, user-centric, and reliable software solutions.
               </p>
 
               <div className="mb-6">
@@ -388,11 +411,11 @@ export default function AnupPortfolio() {
                 <ul className="space-y-3">
                   <li className="flex items-center text-gray-300">
                     <span className="h-2 w-2 rounded-full bg-purple-500 mr-3"></span>
-                    Won College-level Summer of Code Competition 2024
+                    Won - Branch Master Competition 2024
                   </li>
                   <li className="flex items-center text-gray-300">
                     <span className="h-2 w-2 rounded-full bg-purple-500 mr-3"></span>
-                    Won Branch Master Competition 2024
+                    Runner-up - College-level Summer of Code Competition 2024
                   </li>
                   <li className="flex items-center text-gray-300">
                     <span className="h-2 w-2 rounded-full bg-purple-500 mr-3"></span>
@@ -401,7 +424,7 @@ export default function AnupPortfolio() {
                 </ul>
               </div>
               <div className="flex space-x-4 mt-6">
-                <a href="/Anup_Campus_Resume.pdf" target='_blank' className="text-purple-400 hover:text-purple-300 flex items-center">
+                <a href="/Resume.pdf" target='_blank' className="text-purple-400 hover:text-purple-300 flex items-center">
                   Download Resume <ArrowRight size={16} className="ml-1" />
                 </a>
                 <div className="flex space-x-3">
@@ -506,7 +529,7 @@ export default function AnupPortfolio() {
                 key={index}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-lg overflow-hidden shadow-xl border border-gray-700 hover:border-purple-500/50 transition-all duration-300 transform hover:-translate-y-2 group"
               >
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-60 overflow-hidden">
                   <img
                     src={project.image || "/api/placeholder/400/300"}
                     alt={project.title}
@@ -518,7 +541,7 @@ export default function AnupPortfolio() {
                   </div>
                 </div>
                 <div className="p-6">
-                  <p className="text-gray-300 mb-4 h-24 overflow-hidden">{project.description}</p>
+                  <p className="text-gray-300 mb-4 h-20 overflow-hidden">{project.description}</p>
                   <div className="mb-5">
                     <h4 className="text-sm font-semibold text-gray-400 mb-3">Tech Stack:</h4>
                     <div className="flex flex-wrap gap-2">
@@ -533,32 +556,53 @@ export default function AnupPortfolio() {
                     </div>
                   </div>
                   <div className="flex justify-between mt-2">
-                    {/* <a
-                      href={project.Github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-purple-400 hover:text-purple-300 flex items-center text-sm transition-colors"
-                    >
-                      <Github size={16} className="mr-2" /> View Code
-                    </a> */}
-                    <a
-                      href={project.downloadLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-purple-400 hover:text-purple-300 flex items-center text-sm transition-colors"
-                    >
-                      <Download size={16} className="mr-2" /> Download App
-                    </a>
-                    {/* {project.demo && (
+                    {/* Show Play Store / App Store / Website link if present */}
+                    {project.link && (
                       <a
-                        href={project.demo}
+                        href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-purple-400 hover:text-purple-300 flex items-center text-sm transition-colors"
                       >
-                        <ExternalLink size={16} className="mr-2" /> Live Demo
+                        <ExternalLink size={16} className="mr-2" /> View App
                       </a>
-                    )} */}
+                    )}
+
+                    {/* Show video demo if present */}
+                    {project.videoLink && (
+                      <a
+                        href={project.videoLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-purple-400 hover:text-purple-300 flex items-center text-sm transition-colors"
+                      >
+                        <Play size={16} className="mr-2" /> Watch Demo
+                      </a>
+                    )}
+
+                    {/* Show GitHub if present */}
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-purple-400 hover:text-purple-300 flex items-center text-sm transition-colors"
+                      >
+                        <Github size={16} className="mr-2" /> View Code
+                      </a>
+                    )}
+
+                    {/* Show download link if present */}
+                    {project.downloadLink && (
+                      <a
+                        href={project.downloadLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-purple-400 hover:text-purple-300 flex items-center text-sm transition-colors"
+                      >
+                        <Download size={16} className="mr-2" /> Download App
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
