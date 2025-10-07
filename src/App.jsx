@@ -541,7 +541,7 @@ export default function AnupPortfolio() {
                   </div>
                 </div>
                 <div className="p-6">
-                  <p className="text-gray-300 mb-4 h-20 overflow-hidden">{project.description}</p>
+                  <p className="text-gray-300 mb-4 min-h-20">{project.description}</p>
                   <div className="mb-5">
                     <h4 className="text-sm font-semibold text-gray-400 mb-3">Tech Stack:</h4>
                     <div className="flex flex-wrap gap-2">
